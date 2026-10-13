@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eliminación de datos — VlogPost Pages</title>
+<meta name="description" content="Instrucciones para eliminar los datos de la aplicación VlogPost Pages.">
+<style>
+  :root { --accent1:#7C5CFF; --accent2:#22D3EE; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:Segoe UI, system-ui, -apple-system, Arial, sans-serif; background:#0B0B14; color:#E7E7F2; line-height:1.65; }
+  .wrap { max-width:840px; margin:0 auto; padding:48px 24px 72px; }
+  header { text-align:center; padding:32px 0 40px; }
+  .logo { font-size:44px; font-weight:800; background:linear-gradient(90deg,var(--accent1),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; letter-spacing:-1px; }
+  h1 { font-size:28px; margin:12px 0 6px; }
+  .date { color:#8B8BA7; font-size:14px; }
+  h2 { font-size:20px; margin:36px 0 10px; padding-top:8px; border-top:1px solid #23233A; color:#B9A8FF; }
+  p, li { color:#CFCFE2; font-size:15.5px; margin:8px 0; }
+  ul, ol { padding-left:22px; }
+  a { color:var(--accent2); }
+  .card { background:#14142A; border:1px solid #23233A; border-radius:14px; padding:20px 22px; margin:18px 0; }
+  code { background:#1D1D38; padding:2px 7px; border-radius:6px; font-size:13.5px; color:#9FF0FF; word-break:break-all; }
+  footer { margin-top:48px; text-align:center; color:#6F6F8C; font-size:13px; border-top:1px solid #23233A; padding-top:20px; }
+  .grad { background:linear-gradient(90deg,var(--accent1),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">VlogPost</div>
+    <h1>Eliminación de datos</h1>
+    <div class="date">Aplicación de escritorio <strong>VlogPost Pages</strong> · Última actualización: 13 de octubre de 2026</div>
+  </header>
+
+  <div class="card">
+    <p>VlogPost guarda tus datos <strong>únicamente en tu equipo</strong>. Sigue estas instrucciones para eliminarlos por completo, incluidos los permisos concedidos a la app de Facebook (Meta) <em>VlogPost Pages</em>.</p>
+  </div>
+
+  <h2>1. Desconectar tu cuenta de Facebook dentro de VlogPost</h2>
+  <ol>
+    <li>Abre VlogPost y ve a <strong>Conectar / Canales</strong>.</li>
+    <li>En el canal de Facebook conectado, pulsa <strong>Desconectar</strong> (papelera). Esto elimina de tu equipo los tokens y las Páginas asociadas.</li>
+  </ol>
+
+  <h2>2. Revocar los permisos en Facebook</h2>
+  <ol>
+    <li>Entra en Facebook con tu cuenta y abre <a href="https://www.facebook.com/settings?tab=applications" target="_blank" rel="noopener">Configuración → Aplicaciones y sitios web</a>.</li>
+    <li>Busca <strong>VlogPost Pages</strong> y pulsa <strong>Eliminar</strong>. Facebook dejará de compartir datos con la aplicación y retirará los tokens emitidos.</li>
+  </ol>
+
+  <h2>3. Borrar los datos locales de la aplicación</h2>
+  <ul>
+    <li>Desinstala VlogPost desde <strong>Panel de control → Aplicaciones</strong>.</li>
+    <li>Elimina la carpeta <code>%APPDATA%\VlogPost</code> (puedes abrirla pulsando <kbd>Win</kbd>+<kbd>R</kbd> y pegando la ruta). Contiene tu base de datos local (publicaciones, programaciones y credenciales) y se borra por completo con ella.</li>
+    <li>Opcional: borra también los cookies del navegador que se generaron durante el «Continuar con Facebook».</li>
+  </ul>
+
+  <h2>4. Solicitud por correo</h2>
+  <p>Si prefieres que lo hagamos por ti, escribe a <a href="mailto:clarethclemanttusafia@gmail.com">clarethclemanttusafia@gmail.com</a> desde el correo asociado y solicitaremos la eliminación confirmándote cuando esté completada. Respondemos en un plazo máximo de <strong>30 días</strong>.</p>
+
+  <div class="card">
+    <p><strong>Recuerda:</strong> VlogPost no tiene servidores en la nube con tus datos; todo vive en tu equipo, por lo que basta con los pasos 1–3 para una eliminación total.</p>
+  </div>
+
+  <footer>
+    Desarrollado por Ing. Clared Clemantt · <span class="grad">VlogPost Pages</span> · <a href="mailto:clarethclemanttusafia@gmail.com">clarethclemanttusafia@gmail.com</a>
+  </footer>
+</div>
+</body>
+</html>
