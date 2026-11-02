@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>Volver a VlogPost</title><style>body{font:16px system-ui;background:#0b0f1c;color:#eee;display:grid;place-items:center;min-height:100vh;margin:0}main{max-width:480px;padding:28px}a{display:inline-block;background:#7658ed;color:white;padding:14px 22px;border-radius:10px;text-decoration:none}p{line-height:1.6}</style></head><body><main><h1>Volver a VlogPost</h1><p id="message">Comprobando la respuesta de Facebook…</p><a id="return" hidden rel="noreferrer">Continuar en VlogPost</a></main><script>
+'use strict';
+const params = new URLSearchParams(location.search);
+history.replaceState(null, '', location.pathname);
+const state = params.get('state');
+const valid = state && /^[a-zA-Z0-9_-]{10,256}$/.test(state) && (params.has('code') || params.has('error') || params.has('error_code'));
+const message = document.getElementById('message');
+if (!valid) {
+ message.textContent = 'Abre VlogPost y comienza la conexión con Facebook desde el programa.';
+} else {
+ const local = new URL('http://localhost:47815/api/fb/oauth/callback');
+ for (const key of ['state','code','error','error_code','error_description','error_message']) {
+  if (params.has(key)) local.searchParams.set(key,params.get(key));
+ }
+ message.textContent = 'La respuesta está lista. Mantén VlogPost abierto y pulsa el botón para completar la conexión en tu PC.';
+ const link = document.getElementById('return');
+ link.href = local.href; link.hidden = false;
+}
+</script></body></html>
